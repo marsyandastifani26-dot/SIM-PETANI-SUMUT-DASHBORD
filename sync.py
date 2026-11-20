@@ -187,18 +187,24 @@ if menu == "Dashboard Utama":
 
     r = summary.iloc[0]
 
-    c1, c2, c3, c4 = st.columns(4)
+  c1, c2, c3, c4 = st.columns(4)
 
-    c1.metric(
-        "Total Petani",
-        f"{int(r.total_petani):,}"
-    )
+c1.metric(
+    "Total Petani",
+    f"{int(r.total_petani):,}"
+)
 
-    c2.metric(
-        "Luas Lahan",
-        f"{float(r.total_luas):,.2f} Ha"
-    )
+c2.metric(
+    "Luas Lahan",
+    f"{float(r.total_luas):,.2f} Ha"
+)
 
-    c3.metric(
-        "Kabupaten",
-        int(r.total_kabupaten)
+c3.metric(
+    "Kabupaten",
+    int(r.total_kabupaten)
+)
+
+c4.metric(
+    "Komoditas",
+    int(r.total_komoditas)
+)
